@@ -1,0 +1,16 @@
+$sari: yellow;
+$turuncu: orange;
+body{
+    background-color: $sari;
+
+}
+h1{
+    background-color: $turuncu;
+}
+div{
+    color: red;
+
+    p{
+        color: aqua;
+    }
+}
