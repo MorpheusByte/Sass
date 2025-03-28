@@ -1,10 +1,11 @@
 
-@use '../abstract/variable';
-@use '../abstract/mixins';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .nav{
-    border: 2px solid red;
+    // border: 2px solid red;
     height: 10vh;
+    padding: 1rem;
     &__list{
         list-style-type: none;
         text-align: right;
@@ -17,7 +18,7 @@
         text-transform: uppercase;
         text-decoration: none;
         font-size: 1.3rem;
-        font-family: variable.$font-family;
+        font-family: variables.$font-family;
         font-weight: 500;
         @include mixins.soft(1s);
 
@@ -25,8 +26,8 @@
             color: blue;
         }
         &--active{
-            color: orange;
+            color: variables.$secondary-color;
         }
+
     }
 }
-

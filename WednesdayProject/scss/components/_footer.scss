@@ -1,22 +1,26 @@
-@use '../abstract/mixins';
-@use '../abstract/variable';
+//*****************************************************
+//*   FOOTER
+//*****************************************************
 
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
 
 .link-style{
     a{
         padding: 0.4rem;
-        @include mixins.soft(1s);
+        @include mixins.soft(1s) ;
         &:hover{
-            color:variables.$secondary-color;
+            color:variables.$secondary-color ;
         }
     }
 }
 
 footer.horizontal{
-    border: 2px solid red;
+    // border: 2px solid red;
     height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding: 1rem;
+    @extend .link-style;
 }

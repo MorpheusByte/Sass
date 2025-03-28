@@ -1,26 +1,31 @@
+//base
 @use './base/reset';
-@use './abstract/mixins';
-@use './abstract/variable';
+//abstract
+@use './abstracts/mixins';
+@use './abstracts/variables';
+//component
 @use './components/footer';
 @use './components/nav';
 @use './components/responsive';
+//pages
 @use './pages/about';
 @use './pages/contact';
 @use './pages/home';
 @use './pages/project';
 
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css);
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css';
 
 body{
-    font-family: variable.$font-family;
-    background-color: variable.$primary-color;
+    font-family: variables.$font-family;
+    background-color: variables.$primary-color;
     height: 100vh;
     line-height: 1;
-    color: variable.$text-color;
+    color: variables.$text-color;
 }
 
 a{
-    color: variable.$text-color;
+    color: variables.$text-color;
+    text-decoration: none;
 }
 
 h1,h2,h3{
