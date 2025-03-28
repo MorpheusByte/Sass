@@ -1,1 +1,26 @@
 @use './base/reset';
+@use './abstract/mixins';
+@use './abstract/variable';
+@use './components/footer';
+@use './components/nav';
+@use './components/responsive';
+@use './pages/about';
+@use './pages/contact';
+@use './pages/home';
+@use './pages/project';
+
+body{
+    font-family: variable.$font-family;
+    background-color: variable.$primary-color;
+    height: 100vh;
+    line-height: 1;
+    color: variable.$text-color;
+}
+
+a{
+    color: variable.$text-color;
+}
+
+h1,h2,h3{
+    font-weight: 400;
+}

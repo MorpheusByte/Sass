@@ -1,0 +1,32 @@
+
+@use '../abstract/variable';
+@use '../abstract/mixins';
+
+.nav{
+    border: 2px solid red;
+    height: 10vh;
+    &__list{
+        list-style-type: none;
+        text-align: right;
+    }
+    &__item{
+        display: inline;
+        padding: 1rem;
+    }
+    &__link{
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-family: variable.$font-family;
+        font-weight: 500;
+        @include mixins.soft(1s);
+
+        &:hover{
+            color: blue;
+        }
+        &--active{
+            color: orange;
+        }
+    }
+}
+
